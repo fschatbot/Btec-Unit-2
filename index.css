@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply flex flex-col gap-16;
+}
+
+.Navigation {
+	@apply font-['Inter'] px-12 pt-5
+	flex justify-between items-center;
+}
+
+.Navigation .left,
+.Navigation .right {
+	@apply text-xl flex flex-row items-center gap-10;
+}
+
+.Navigation .right {
+	@apply gap-5;
+}
+
+.Navigation .right svg {
+	@apply cursor-pointer;
+}
+
+.SearchBox {
+	@apply flex items-center gap-5 flex-row relative
+	after:content-[''] after:absolute after:bottom-0 after:inset-x-0 after:bg-black after:h-[1px];
+}
+
+.SearchBox input {
+	@apply outline-none;
+}
+
+.straightLine {
+	@apply w-[1px] h-[24px] bg-black;
+}
+
+/* Hero element styling */
+.rounding {
+	@apply flex-grow h-80;
+	filter: url("#goo");
+}
+
+.rounding .container {
+	@apply bg-container-bg p-10 h-full
+	flex flex-col justify-center gap-1;
+	clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+}
+
+.Group1 {
+	@apply flex justify-center items-center px-12 h-80 font-['Fredoka'];
+}
+
+.rounding .container button {
+	@apply bg-white rounded-xl px-5 py-2 w-max mt-6;
+}
+
+.rounding .container p {
+	width: 70%;
+}
+
+/* Top Sellers */
+
+.Group2 {
+	@apply font-['Inter'] px-28
+	gap-5 flex flex-col;
+}
+
+.action-buttons {
+	@apply flex justify-between items-center;
+}
+
+.action-buttons button {
+	@apply text-container-txt bg-container-bg h-12 min-w-12 rounded-3xl;
+}
+
+.action-buttons button[special] {
+	@apply px-9 rounded-xl;
+}
+
+.carosel {
+	@apply flex flex-row justify-between;
+}
+
+.book {
+	@apply relative min-w-max;
+}
+
+.book img {
+	@apply rounded-md;
+}
+
+.book .CTA {
+	@apply absolute top-2 right-2 bg-white rounded-3xl px-2 py-1 rotate-[135deg];
+}
+
+.book .popup {
+	@apply flex flex-row justify-center items-center gap-1
+	absolute -top-10 transform -translate-x-1/2 scale-0
+	transition-transform duration-300 ease-in-out origin-bottom-left;
+}
+
+.book:hover .popup {
+	@apply scale-100;
+}
