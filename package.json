@@ -6,7 +6,9 @@
 	},
 	"scripts": {
 		"build": "npx tailwindcss build -i index.css -o dist/styles.css -m",
-		"dev": "npx tailwindcss build -i index.css -o dist/styles.css --watch -m",
-		"dev:membership": "npx tailwindcss build -i membership.css -o dist/membership.css --watch -m"
+		"dev:index": "npx tailwindcss build -i index.css -o dist/styles.css --watch -m",
+		"dev:membership": "npx tailwindcss build -i membership.css -o dist/membership.css --watch -m",
+		"dev:home": "npx tailwindcss build -i home.css -o dist/home.css --watch -m",
+		"dev:books": "npx tailwindcss build -i books.css -o dist/books.css --watch -m"
 	}
 }
