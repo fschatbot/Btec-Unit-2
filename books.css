@@ -1,0 +1,105 @@
+.welcome {
+	@apply flex flex-row justify-between items-center mx-12
+	px-16 py-6 text-xl font-light text-black rounded-3xl bg-zinc-300;
+}
+
+.welcome h1 {
+	@apply text-4xl font-semibold;
+}
+
+.welcome p {
+	@apply w-[40%] mt-2;
+}
+
+.welcome button,
+.botm button {
+	@apply justify-center py-2 px-5 mt-7 text-white bg-blue-400 rounded-xl;
+}
+
+.welcome img {
+	@apply h-80;
+}
+
+/* Book Browsing */
+.main {
+	@apply flex flex-row gap-10;
+
+	.browse {
+		@apply flex flex-col gap-5 bg-container-bg py-5 px-6 rounded-xl grow justify-between;
+	}
+}
+
+.navi {
+	@apply flex flex-row justify-between text-lg;
+
+	& > div {
+		@apply flex flex-row gap-3 items-center;
+	}
+	.tag {
+		@apply px-4 py-1 rounded-3xl bg-white text-black font-semibold;
+	}
+	.tag.active {
+		@apply bg-slate-700 text-white font-bold;
+	}
+}
+
+.book-grid {
+	@apply grid grid-cols-5 gap-5;
+
+	.book img {
+		@apply w-[200px] rounded-xl aspect-[0.68];
+	}
+
+	.book h2 {
+		@apply text-2xl font-bold;
+	}
+
+	.book span {
+		@apply text-xl text-ellipsis text-zinc-600;
+	}
+}
+
+.botm {
+	@apply bg-container-bg flex flex-col font-['Lexend']
+	items-center px-9 py-8 rounded-xl;
+
+	.title {
+		@apply text-xl font-bold text-black;
+	}
+
+	.book-title {
+		@apply mt-8 text-xl font-medium text-center text-black w-80;
+	}
+
+	.book-img {
+		@apply self-stretch mt-5 w-80 aspect-[0.68] rounded-lg mx-auto;
+	}
+
+	.imp-details {
+		@apply flex flex-row gap-5;
+	}
+
+	.imp-details span {
+		@apply text-lg relative;
+	}
+
+	.imp-details span:first-child::after {
+		@apply content-[''] h-1 w-1 absolute rounded-xl bg-gray-600
+			-right-3 top-1/2 transform -translate-y-1/2;
+	}
+
+	.rating {
+		@apply flex flex-row gap-1 justify-center items-center;
+	}
+	.rating span {
+		@apply ml-2;
+	}
+
+	.details {
+		@apply flex flex-row gap-4 items-center font-['fredoka'] text-center text-neutral-600;
+	}
+
+	.line {
+		@apply h-6 w-[2px] rounded-md bg-zinc-600;
+	}
+}

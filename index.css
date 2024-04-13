@@ -41,8 +41,6 @@ body {
 	@apply w-[1px] h-[24px] bg-black;
 }
 
-
-
 footer {
 	@apply bg-container-bg p-10 rounded-t-xl
 	flex flex-row justify-between items-center;
@@ -63,6 +61,10 @@ footer .links a {
 footer .Contact,
 footer .logo {
 	@apply flex flex-col items-center gap-3;
+
+	img {
+		@apply rounded-full;
+	}
 }
 
 footer .logo p {
