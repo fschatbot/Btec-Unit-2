@@ -1,0 +1,110 @@
+.content {
+	@apply flex flex-col gap-16 items-center;
+}
+
+.steps {
+	@apply flex flex-row gap-10 items-center font-['fredoka'] text-center;
+}
+
+.line {
+	@apply h-1 w-32 rounded-md;
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+	/* background: linear-gradient(90deg, #6675a3 0%, #292d46 50%, #6675a3 100%); */
+}
+
+.title {
+	@apply text-center;
+}
+
+.title h1 {
+	@apply text-4xl font-bold font-['Inter'];
+}
+.title span {
+	@apply text-gray-500 font-['Inter'];
+}
+
+/* Selection */
+
+.selection {
+	@apply bg-container-bg flex flex-row w-max rounded-3xl
+	relative font-['Inter'] text-center;
+}
+
+.selection[monthly] .selector {
+	@apply left-0;
+}
+.selection[annually] .selector {
+	@apply right-0;
+}
+.selection[monthly] span[monthly],
+.selection[annually] span[annually] {
+	@apply text-white font-bold;
+}
+
+.selection .selector,
+.selection span {
+	@apply w-28 px-5 py-2 z-10;
+}
+
+.selection .selector {
+	@apply absolute bg-slate-800 h-full z-0 rounded-3xl;
+}
+
+.popup {
+	@apply absolute right-0 bottom-0 text-gray-500
+	translate-x-1/2 translate-y-full;
+}
+
+.popup [icon="fluent:arrow-reply-24-filled"] {
+	@apply -scale-100;
+}
+
+/* memberships */
+.memberships {
+	@apply flex flex-row gap-16;
+}
+.memberships > div {
+	@apply rounded-2xl bg-container-bg
+	flex flex-col p-3 w-80 gap-5 justify-between;
+}
+
+.header {
+	@apply rounded-2xl bg-[#656565] text-white p-6 relative
+	flex flex-col items-center justify-center;
+}
+
+.header h1 {
+	@apply text-3xl font-bold font-['Inter'];
+}
+.money-detail {
+	margin-top: 11px;
+	font: 20px Inter, sans-serif;
+}
+.benefits {
+	@apply flex flex-col gap-2;
+}
+.benefits > div {
+	@apply flex flex-row gap-3 items-center;
+}
+
+button {
+	@apply text-center bg-[#656565] text-white
+	font-bold font-['Inter'] rounded-xl py-3 px-10 text-xl;
+	margin-top: 60px;
+}
+
+.indeterminate {
+	@apply border-2 border-black scale-105
+	transform -translate-y-3;
+}
+
+.popular {
+	@apply absolute right-2 bottom-2
+	rounded-3xl bg-white/20 px-4
+	font-['Inter'] text-sm;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.indeterminate button,
+.indeterminate .header {
+	@apply bg-black;
+}

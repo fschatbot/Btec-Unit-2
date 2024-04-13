@@ -6,6 +6,7 @@
 	},
 	"scripts": {
 		"build": "npx tailwindcss build -i index.css -o dist/styles.css -m",
-		"dev": "npx tailwindcss build -i index.css -o dist/styles.css --watch -m"
+		"dev": "npx tailwindcss build -i index.css -o dist/styles.css --watch -m",
+		"dev:membership": "npx tailwindcss build -i membership.css -o dist/membership.css --watch -m"
 	}
 }
